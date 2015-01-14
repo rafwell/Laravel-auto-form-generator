@@ -81,7 +81,7 @@ class Formgenerator{
 
 
                 if ( ! isset($type) OR empty($type)) {
-                    $dataType = $columns[$fieldName]->getType()->getName();
+                    $dataType = $columns[strtolower($fieldName)]->getType()->getName();
                     $type = $this->getInputType($dataType, $fieldName);
                 }
 
